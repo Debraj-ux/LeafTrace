@@ -13,226 +13,195 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+font-family:'Segoe UI',sans-serif
 }
 
 body{
 background:#f5fff5;
-color:#333;
+color:#333
 }
 
-/* Header */
+/* header */
 
 header{
 background:#1b5e20;
-color:white;
-padding:20px 50px;
+color:#fff;
+padding:15px 25px;
 display:flex;
 justify-content:space-between;
-align-items:center;
+align-items:center;flex-wrap:wrap
 }
 
 .logo{
 font-size:32px;
-font-weight:bold;
+font-weight:bold
 }
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-font-weight:500;
-}
-
-/* Hero */
 
 .hero{
-height:65vh;
-background:
-linear-gradient(rgba(0,0,0,.5),
-rgba(0,0,0,.5)),
-url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1600&q=80');
-
+min-height:65vh;
+background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1600&q=80');
 background-size:cover;
 background-position:center;
+display:flex;justify-content:center;
+align-items:center;text-align:center;
+color:#fff;padding:30px 20px
+}
 
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
-padding:20px;
+.hero-content{
+max-width:800px
 }
 
 .hero-content h1{
 font-size:60px;
-margin-bottom:15px;
+margin-bottom:15px
 }
 
 .hero-content p{
 font-size:22px;
 margin-bottom:20px;
+line-height:1.6
 }
 
 .btn{
 background:#4caf50;
 padding:12px 25px;
-color:white;
+color:#fff;
 text-decoration:none;
 border-radius:8px;
+display:inline-block
 }
 
-/* About */
+.about,.plants{
+padding:60px 10%
+}
 
 .about{
-padding:60px 10%;
+text-align:center
+}
+
+.about h2,.plants h2{
 text-align:center;
-}
-
-.about h2{
 color:#1b5e20;
-margin-bottom:20px;
+margin-bottom:20px
 }
 
-
-/* Plants */
-
-.plants{
-padding:60px 10%;
-}
-
-.plants h2{
-text-align:center;
-margin-bottom:40px;
-color:#1b5e20;
+.about p{
+line-height:1.8;
+font-size:17px
 }
 
 .grid{
 display:grid;
-grid-template-columns:
-repeat(auto-fit,minmax(250px,1fr));
-
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px
 }
 
 .card{
-background:white;
+background:#fff;
 border-radius:15px;
 overflow:hidden;
 box-shadow:0 5px 15px rgba(0,0,0,.1);
-transition:.3s;
+transition:.3s
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-5px)
 }
 
 .card img{
 width:100%;
 height:220px;
-object-fit:cover;
+object-fit:cover
 }
 
 .card-content{
 padding:20px;
-flex:1;
 display:flex;
-flex-direction:column;
-justify-content:space-between;
+flex-direction:column
 }
 
 .card-content h3{
 margin-bottom:10px;
-color:#1b5e20;
+color:#1b5e20
 }
 
 .card-content a{
-display:inline-block;
-margin-top:10px;
-text-decoration:none;
+margin-top:15px;text-decoration:none;
 background:#2e7d32;
-color:white;
+color:#fff;
 padding:10px 15px;
 border-radius:6px;
+text-align:center
 }
-
-/* Footer */
-
 footer{
 background:#1b5e20;
-color:white;
-text-align:center;
-padding:30px;
-margin-top:50px;
+color:#fff;text-align:center;
+padding:30px;margin-top:50px
 }
-
-@media(max-width:768px){
-
-.hero-content h1{
-font-size:38px;
+@media(max-width:992px)
+{
+.hero-content h1{font-size:48px}
+.hero-content p{font-size:20px}
 }
-
-
+@media(max-width:768px)
+{header{flex-direction:column;
+text-align:center}
+.logo{font-size:28px;
+margin-bottom:10px}
+.hero{min-height:55vh;
+padding:25px 15px}
+.hero-content h1{font-size:34px}
+.hero-content p{font-size:17px}.about,
+.plants{padding:40px 20px}
+.about p{text-align:justify;
+font-size:16px}
+.grid{grid-template-columns:1fr}
+.card img{height:220px}
+footer{padding:25px 15px}
 }
-
+@media(max-width:480px)
+{.hero-content h1{font-size:28px}
+.hero-content p{font-size:15px}
+.btn{font-size:15px;padding:10px 20px}
+.logo{font-size:24px}.about h2,
+.plants h2{font-size:24px}
+.card img{height:200px}
+}
 </style>
+
 </head>
 
 <body>
 
 <header>
 
-<div class="logo"> MorphoTrace</div>
-
-
+<div class="logo">MorphoTrace</div>
 </header>
 
 <section class="hero">
-
 <div class="hero-content">
-
 <h1>MorphoTrace</h1>
-
-<p>
-QR-Based Digital Plant Documentation System
+<p>QR-Based Digital Plant Documentation System
 </p>
-
-<p>
-Department of Botany
+<p>Department of Botany
 <br>
 Sripat Singh College
 </p>
-
-<a href="#plants" class="btn">
-Explore Plants
-</a>
-
+<a href="#plants" class="btn">Explore Plants</a>
 </div>
 
 </section>
 
 <section class="about">
-
 <h2>About MorphoTrace</h2>
-
 <p>
-
-MorphoTrace is a QR-based digital plant documentation platform developed by the students of the Department of Botany, Sripat Singh College. 
-It serves as a comprehensive digital page showcasing detailed information about all the plants on the college campus. 
-By scanning the QR codes attached to the trees, anyone can instantly access scientific data, photographs, medicinal uses, etc 
-making plant identification interactive and effortless.
-Students can scan QR codes attached to plants
-and instantly access scientific information,
-photographs, medicinal uses, and many more. 
-This innovative approach not only enhances the learning experience but also promotes 
-environmental awareness and conservation efforts within the college community.
-
+MorphoTrace is a QR-based digital plant documentation platform developed by the students of the Department of Botany, Sripat Singh College.
+It serves as a comprehensive digital page showcasing detailed information about all the plants on the college campus.
+By scanning the QR codes attached to the trees, anyone can instantly access scientific data, photographs, medicinal uses, etc making plant identification interactive and effortless.
+Students can scan QR codes attached to plants and instantly access scientific information, photographs, medicinal uses, and many more.
+This innovative approach not only enhances the learning experience but also promotes environmental awareness and conservation efforts within the college community.
 </p>
-
 </section>
-
-<br>
-
 
 <section class="plants" id="plants">
 
@@ -241,101 +210,61 @@ environmental awareness and conservation efforts within the college community.
 <div class="grid">
 
 <div class="card">
-
-<img src="https://cdn.britannica.com/73/177473-050-7B7C6918/aloe-vera-plant.jpg?w=600">
+<img src="https://cdn.britannica.com/73/177473-050-7B7C6918/aloe-vera-plant.jpg?w=600" alt="Aloe Vera">
 
 <div class="card-content">
 
 <h3>Aloe Vera</h3>
-
 <p>Medicinal Succulent Plant</p>
-
 <a href="aloe-vera.html">
 Read More
 </a>
-
 </div>
-
 </div>
-
 <div class="card">
-
-<img src="https://5.imimg.com/data5/SELLER/Default/2025/5/507671405/AZ/SC/IS/8328345/green-neem-tree-plant.jpeg" alt="Neem Tree">
-
+<img src="https://5.imimg.com/data5/SELLER/Default/2025/5/507671405/AZ/SC/IS/8328345/green-neem-tree-plant.jpeg" alt="Neem">
 <div class="card-content">
-
 <h3>Neem</h3>
-
 <p>Medicinal Tree</p>
-
 <a href="neem.html">
 Read More
 </a>
-
 </div>
-
 </div>
-
-
 <div class="card">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Ashoka_%28Polyalthia_longifolia%29_flowers_W_IMG_7050.jpg">
-
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Ashoka_%28Polyalthia_longifolia%29_flowers_W_IMG_7050.jpg" alt="Devdaru">
 <div class="card-content">
-
 <h3>Devdaru</h3>
-
 <p>Sacred Tree</p>
-
 <a href="devadaru.html">
 Read More
 </a>
 
 </div>
-
 </div>
-
 <div class="card">
-
-<img src="https://www.greendna.in/cdn/shop/products/1296x728_Holy_Basil_1155x.jpg?v=1591462900">
-
+<img src="https://www.greendna.in/cdn/shop/products/1296x728_Holy_Basil_1155x.jpg?v=1591462900" alt="Tulsi">
 <div class="card-content">
-
 <h3>Tulsi</h3>
-
 <p>Sacred Medicinal Herb</p>
-
 <a href="tulsi.html">
 Read More
 </a>
 
 </div>
-
 </div>
-
-
 <div class="card">
-
-<img src="https://www.healthyhouseplants.com/wp-content/uploads/2024/08/Moses-in-the-Cradle.jpg">
-
+<img src="https://www.healthyhouseplants.com/wp-content/uploads/2024/08/Moses-in-the-Cradle.jpg" alt="Boat Lily">
 <div class="card-content">
-
 <h3>Boat Lily</h3>
-
 <p>Ornamental Plant</p>
-
 <a href="boatlily.html">
 Read More
 </a>
-
 </div>
-
 </div>
-
 <div class="card">
-
-<img src="https://nurserynisarga.in/wp-content/uploads/2022/03/Betel-NutSupari-Plant-02.webp">
-
+<img src="https://nurserynisarga.in/wp-content/uploads/2022/03/Betel-NutSupari-Plant-02.webp" alt="Supari">
 <div class="card-content">
 
 <h3>Supari</h3>
@@ -344,6 +273,7 @@ Read More
 
 <a href="supari.html">
 Read More
+
 </a>
 
 </div>
@@ -355,20 +285,15 @@ Read More
 </section>
 
 <footer>
-
-<h3> MorphoTrace</h3>
-
+<h3>MorphoTrace</h3>
 <p>
 Developed by: Souptik Biswas and Debraj Bosu Students of Department of Botany
 </p>
-
-<p>
-Sripat Singh College
-</p>
-
+<p>Sripat Singh College</p>
 <br>
-
-<p>Scan • Learn • Explore • Conserve</p>
+<p>
+Scan • Learn • Explore • Conserve
+</p>
 <p style="margin-top:10px;">
 2026 Department of Botany, Sripat Singh College
 </p>
